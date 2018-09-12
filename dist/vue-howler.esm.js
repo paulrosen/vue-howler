@@ -1,6 +1,6 @@
 /*
  * vue-howler v0.7.0
- * (c) 2017 Mick Dekkers
+ * (c) 2018 Mick Dekkers
  * Released under the MIT License.
  */
 import { Howl } from 'howler';
@@ -117,13 +117,11 @@ var objectAssign$1 = shouldUseNative() ? Object.assign : function (target, sourc
 	return to;
 };
 
-var babelHelpers = {};
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
   return typeof obj;
 } : function (obj) {
   return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
 };
-babelHelpers;
 
 var index = {
   props: {
@@ -338,7 +336,9 @@ var index = {
     _initialize: function _initialize() {
       var _this2 = this;
 
+      console.log("vue-howler initialization");
       this.$data._howl = new Howl({
+        ctx: window.aci,
         src: this.sources,
         volume: this.volume,
         html5: this.html5,
