@@ -227,7 +227,9 @@ export default {
      * Initialize the Howler player
      */
     _initialize() {
+      console.log("vue-howler initialization")
       this.$data._howl = new Howl({
+        ctx: window.aci,
         src: this.sources,
         volume: this.volume,
         html5: this.html5,
