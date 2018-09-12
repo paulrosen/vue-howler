@@ -338,7 +338,7 @@ var index = {
     _initialize: function _initialize() {
       var _this2 = this;
 
-      console.log("vue-howler initialization");
+      console.log("vue-howler's initialization", window.aci);
       this.$data._howl = new howler.Howl({
         ctx: window.aci,
         src: this.sources,
